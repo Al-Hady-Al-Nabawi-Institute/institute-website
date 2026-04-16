@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#053833">
+<title>معهد الهدي النبوي للعلوم الشرعية</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="tokens.css">
+<link rel="stylesheet" href="shell.css">
+<style>
+  /* ---------- Hero ---------- */
+  .hero {
+    position: relative;
+    background: var(--cream);
+    padding: 48px var(--gutter) 52px;
+    text-align: center;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(circle at 18% 12%, rgba(224, 179, 51, .12) 0, transparent 35%),
+      radial-gradient(circle at 82% 88%, rgba(13, 107, 99, .08) 0, transparent 40%);
+    pointer-events: none;
+  }
+  .hero-logo {
+    position: relative;
+    margin: 0 auto;
+    width: 240px;
+    max-width: 78%;
+    height: auto;
+    filter: drop-shadow(0 2px 6px rgba(5, 56, 51, .1));
+  }
+  .hero-sep {
+    width: 64px;
+    height: 2px;
+    background: var(--gold);
+    margin: 20px auto 16px;
+    opacity: .7;
+  }
+  .hero-tagline {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.45;
+    color: var(--teal-deep);
+    max-width: 340px;
+    margin: 0 auto 10px;
+    position: relative;
+  }
+  .hero-lead {
+    font-size: 14px;
+    line-height: 1.8;
+    color: var(--muted);
+    max-width: 360px;
+    margin: 0 auto 26px;
+    position: relative;
+  }
+  .hero-cta {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: stretch;
+    max-width: 320px;
+    margin: 0 auto;
+    position: relative;
+  }
+  .hero-note {
+    margin-top: 14px;
+    font-size: 12px;
+    color: var(--muted);
+    position: relative;
+  }
+  .hero-note strong { color: var(--teal-deep); font-weight: 700; }
+
+  /* ---------- Perks grid (2x2 on mobile) ---------- */
+  .perks-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  .perk {
+    background: var(--white);
+    border-radius: var(--radius-md);
+    border-inline-start: 5px solid var(--gold);
+    padding: 16px 14px;
+    box-shadow: var(--shadow-card);
+  }
+  .perk .perk-icon {
+    width: 36px;
+    height: 36px;
+    display: grid;
+    place-items: center;
+    color: var(--gold);
+    background: rgba(224, 179, 51, .12);
+    border-radius: 10px;
+    margin-bottom: 10px;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 15px;
+  }
+  .perk h3 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.35;
+    color: var(--teal-deep);
+    margin-bottom: 2px;
+  }
+  .perk p {
+    font-size: 12.5px;
+    line-height: 1.55;
+    color: var(--muted);
+  }
+
+  /* ---------- Program glance ---------- */
+  .program-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 16px;
+    padding: 14px 16px;
+    background: var(--white);
+    border-radius: var(--radius-md);
+    border-inline-start: 5px solid var(--teal);
+    box-shadow: var(--shadow-soft);
+  }
+  .program-meta .meta-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    font-size: 13.5px;
+  }
+  .program-meta .meta-row span:first-child { color: var(--muted); }
+  .program-meta .meta-row span:last-child  { color: var(--teal-deep); font-weight: 700; font-family: var(--font-display); }
+
+  /* ---------- Stats (dark section) ---------- */
+  .stats-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 16px;
+  }
+  .stat {
+    padding: 18px 16px;
+    border-radius: var(--radius-md);
+    background: rgba(247, 241, 227, .05);
+    border: 1px solid rgba(224, 179, 51, .22);
+    border-inline-start: 4px solid var(--gold);
+    text-align: start;
+  }
+  .stat .num {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 1;
+    color: var(--gold);
+    margin-bottom: 6px;
+  }
+  .stat .unit {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--on-dark);
+    line-height: 1.4;
+  }
+
+  /* ---------- Faculty ---------- */
+  .faculty-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .faculty-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 14px 16px;
+    background: var(--white);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-soft);
+    border-inline-start: 4px solid var(--gold);
+  }
+  .faculty-row .name {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--teal-deep);
+  }
+  .faculty-row .role {
+    font-size: 12px;
+    color: var(--muted);
+    font-weight: 400;
+    margin-top: 2px;
+  }
+  .faculty-row .badge {
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: 11px;
+    color: var(--gold);
+    padding: 4px 10px;
+    background: rgba(224, 179, 51, .12);
+    border-radius: var(--radius-pill);
+  }
+
+  /* ---------- Final CTA ---------- */
+  .final-cta { text-align: center; }
+  .final-cta h2 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.3;
+    color: var(--gold);
+    margin-bottom: 10px;
+  }
+  .final-cta p {
+    font-size: 14px;
+    line-height: 1.75;
+    color: rgba(247, 241, 227, .85);
+    margin-bottom: 24px;
+    max-width: 320px;
+    margin-inline: auto;
+  }
+  .final-cta .btn { margin-inline: auto; }
+</style>
+</head>
+<body>
+<div class="phone">
+
+  <!-- ========== Nav ========== -->
+  <header class="nav">
+    <div class="wordmark">
+      <img src="../logo.png" alt="">
+      <span>الهدي النبوي</span>
+    </div>
+    <a href="admissions.html" class="nav-register">سجّل الآن</a>
+    <button class="nav-toggle" aria-label="القائمة">☰</button>
+  </header>
+
+  <!-- ========== Hero ========== -->
+  <section class="hero">
+    <img src="../logo.png" alt="معهد الهدي النبوي للعلوم الشرعية" class="hero-logo">
+
+    <div class="hero-sep"></div>
+
+    <p class="eyebrow">للعلوم الشرعيّة</p>
+    <h1 class="hero-tagline">تأهيل طلاب علم ودعاة يجمعون بين العلم والحكمة والتزكية</h1>
+    <p class="hero-lead">برنامج أكاديمي متكامل، حضوريّ ومجانيّ بالكامل، مصمّم لغير المتفرّغين.</p>
+
+    <div class="hero-cta">
+      <a href="admissions.html" class="btn btn-primary btn-arrow">تقدّم للقبول</a>
+      <a href="#program" class="btn btn-ghost-on-light">تعرّف على البرنامج</a>
+    </div>
+
+    <p class="hero-note"><strong>الدورة الأولى ٢٠٢٦</strong> · التسجيل مفتوح الآن</p>
+  </section>
+
+  <div class="brand-strip"></div>
+
+  <!-- ========== Perks ========== -->
+  <section class="section cream">
+    <p class="eyebrow" style="color:var(--gold); margin-bottom:6px;">لماذا الهدي النبوي</p>
+    <h2 class="section-title">ميزات الدراسة في المعهد</h2>
+
+    <div class="perks-grid">
+      <div class="perk">
+        <div class="perk-icon">✓</div>
+        <h3>مجانيّ بالكامل</h3>
+        <p>لا رسوم ولا أقساط طوال مدة الدراسة</p>
+      </div>
+      <div class="perk">
+        <div class="perk-icon">⏱</div>
+        <h3>مرونة تامة</h3>
+        <p>مصمّم لغير المتفرّغين من العاملين والجامعيّين</p>
+      </div>
+      <div class="perk">
+        <div class="perk-icon">✦</div>
+        <h3>منهج متين</h3>
+        <p>٢٤ مقرّراً موزّعة على ثلاثة فصول دراسية</p>
+      </div>
+      <div class="perk">
+        <div class="perk-icon">◉</div>
+        <h3>حضوريّ</h3>
+        <p>تفاعل مباشر مع هيئة تدريس متمكّنة</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== Program glance ========== -->
+  <section id="program" class="section cream-deep">
+    <p class="eyebrow" style="color:var(--teal); margin-bottom:6px;">البرنامج الأكاديمي</p>
+    <h2 class="section-title">منهج متكامل من أصول العلوم الشرعية</h2>
+    <p class="section-lead">ثلاثة فصول دراسية، واحد وعشرون شهراً من الدراسة المنتظمة، مع دورة امتحانية في ختام كلّ فصل.</p>
+
+    <div class="program-meta">
+      <div class="meta-row"><span>مدّة البرنامج</span><span>٢١ شهراً</span></div>
+      <div class="meta-row"><span>عدد الفصول</span><span>٣ فصول</span></div>
+      <div class="meta-row"><span>المقرّرات</span><span>٢٤ مقرّراً</span></div>
+      <div class="meta-row"><span>الساعات الأسبوعية</span><span>٩ ساعات</span></div>
+    </div>
+
+    <p class="body-md" style="color:var(--teal-deep); font-family:var(--font-display); font-weight:700; margin-bottom:10px;">المواد الرئيسية</p>
+    <div class="tags">
+      <span class="tag">القرآن الكريم</span>
+      <span class="tag">علوم القرآن والتفسير</span>
+      <span class="tag">الحديث وعلومه</span>
+      <span class="tag">الفقه</span>
+      <span class="tag">العقيدة</span>
+      <span class="tag">السيرة والتاريخ</span>
+      <span class="tag">النحو</span>
+      <span class="tag">التزكية والأخلاق</span>
+      <span class="tag">الخطابة وفن الدعوة</span>
+    </div>
+
+    <a href="#" class="btn btn-ghost-on-light btn-arrow btn-block" style="margin-top:20px;">عرض الخطة الدراسية كاملة</a>
+  </section>
+
+  <!-- ========== Stats ========== -->
+  <section class="section dark">
+    <p class="eyebrow">أرقام تعرّفك بالبرنامج</p>
+    <h2 class="section-title" style="color:var(--on-dark); border-color:var(--gold);">برنامج مدروس بعناية</h2>
+
+    <div class="stats-row">
+      <div class="stat"><div class="num">٢١</div><div class="unit">شهراً دراسياً</div></div>
+      <div class="stat"><div class="num">٣</div><div class="unit">فصول دراسية</div></div>
+      <div class="stat"><div class="num">٢٤</div><div class="unit">مقرّراً</div></div>
+      <div class="stat"><div class="num">٩</div><div class="unit">ساعات أسبوعية</div></div>
+    </div>
+  </section>
+
+  <!-- ========== About preview ========== -->
+  <section class="section cream">
+    <p class="eyebrow" style="color:var(--gold);">عن المعهد</p>
+    <h2 class="section-title">رسالتنا</h2>
+    <p class="body-md" style="color:var(--muted); margin-bottom:16px;">
+      تأهيل طلاب علم ودعاة يجمعون بين العلم والحكمة والتزكية، لبناء الوطن من خلال خطاب إسلاميّ يخاطب العقول ويجذب القلوب، وفق برامج تعليمية متكاملة لغير المتفرّغين.
+    </p>
+
+    <ul class="bullet-list" style="margin-bottom:20px;">
+      <li>تمكين الأصول العلمية في العلوم الشرعية لدى الدعاة</li>
+      <li>الجمع بين تمكين العلم وتهذيب السلوك</li>
+      <li>تمكين أسس الخطاب الديني المعتدل</li>
+    </ul>
+
+    <a href="#" class="btn btn-ghost-on-light btn-arrow btn-block">تعرّف أكثر على المعهد</a>
+  </section>
+
+  <!-- ========== Faculty teaser ========== -->
+  <section class="section cream-deep">
+    <p class="eyebrow" style="color:var(--teal);">هيئة التدريس</p>
+    <h2 class="section-title">مجلسنا العلمي</h2>
+    <p class="section-lead">نخبة من العلماء يشرفون على المنهج والمحتوى العلمي</p>
+
+    <div class="faculty-list">
+      <div class="faculty-row">
+        <div>
+          <div class="name">د. أحمد قباوة</div>
+          <div class="role">عضو المجلس العلمي</div>
+        </div>
+        <span class="badge">مجلس علمي</span>
+      </div>
+      <div class="faculty-row">
+        <div>
+          <div class="name">د. محمود زعتري</div>
+          <div class="role">عضو المجلس العلمي</div>
+        </div>
+        <span class="badge">مجلس علمي</span>
+      </div>
+      <div class="faculty-row">
+        <div>
+          <div class="name">الشيخ حمزة الفرج</div>
+          <div class="role">عضو المجلس العلمي</div>
+        </div>
+        <span class="badge">مجلس علمي</span>
+      </div>
+      <div class="faculty-row">
+        <div>
+          <div class="name">الشيخ زكريا بدوي</div>
+          <div class="role">عضو المجلس العلمي</div>
+        </div>
+        <span class="badge">مجلس علمي</span>
+      </div>
+    </div>
+
+    <a href="#" class="btn btn-ghost-on-light btn-arrow btn-block" style="margin-top:20px;">تعرّف على هيئة التدريس</a>
+  </section>
+
+  <!-- ========== Final CTA ========== -->
+  <section class="section dark final-cta">
+    <img src="../logo.png" alt="" style="margin:0 auto 16px; width:140px; filter: brightness(0) invert(1); opacity:.45;">
+    <h2>هل أنت مستعدّ للانضمام؟</h2>
+    <p>التسجيل مفتوح للدورة الأولى لعام ٢٠٢٦. تقدّم الآن وابدأ رحلتك في طلب العلم الشرعي.</p>
+    <a href="admissions.html" class="btn btn-primary btn-arrow">تقدّم للقبول</a>
+  </section>
+
+  <!-- ========== Footer ========== -->
+  <footer class="footer">
+    <div class="footer-brand">
+      <img src="../logo.png" alt="">
+      <div class="footer-name">
+        معهد الهدي النبوي
+        <small>للعلوم الشرعية</small>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#">الرئيسية</a></li>
+        <li><a href="#">عن المعهد</a></li>
+        <li><a href="#">البرنامج الأكاديمي</a></li>
+        <li><a href="admissions.html">القبول والتسجيل</a></li>
+        <li><a href="#">تواصل معنا</a></li>
+      </ul>
+    </nav>
+    <div class="footer-contact">
+      <p><strong>العنوان:</strong> يُحدّد لاحقاً</p>
+      <p><strong>البريد:</strong> يُحدّد لاحقاً</p>
+      <p><strong>الهاتف:</strong> يُحدّد لاحقاً</p>
+    </div>
+    <div class="footer-legal">© ٢٠٢٦ معهد الهدي النبوي للعلوم الشرعية — جميع الحقوق محفوظة</div>
+  </footer>
+
+</div>
+</body>
+</html>
