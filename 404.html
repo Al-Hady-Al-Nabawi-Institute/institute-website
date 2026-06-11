@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0c211d">
+<meta name="robots" content="noindex">
+<title>الصفحة غير موجودة — معهد الهدي النبوي</title>
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="stylesheet" href="assets/fonts/fonts.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="topnav">
+  <div class="container topnav-inner">
+    <a href="index.html" class="brand">
+      <img src="assets/logo.png" alt="">
+      <div class="wordmark">
+        الهدي النبوي
+        <small>للعلوم الشرعيّة</small>
+      </div>
+    </a>
+    <nav id="mainnav">
+      <ul>
+        <li><a href="index.html">الرئيسية</a></li>
+        <li><a href="about.html">عن المعهد</a></li>
+        <li><a href="program.html">البرنامج</a></li>
+        <li><a href="admissions.html">القبول</a></li>
+        <li><a href="contact.html">تواصل</a></li>
+      </ul>
+    </nav>
+    <a href="admissions.html" class="nav-cta">تقدّم للقبول</a>
+    <button class="menu-toggle" aria-label="القائمة" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" width="20" height="20"><path d="M3 6h18M3 12h18M3 18h18" stroke-linecap="round"></path></svg>
+    </button>
+  </div>
+</header>
+
+<section class="page-banner night-field" style="min-height: 60vh;">
+  <div class="container">
+    <div class="crumb"><a href="index.html">الرئيسية</a> ← ٤٠٤</div>
+    <h1>هذه الصفحةُ <em>غيرُ موجودة.</em></h1>
+    <p class="lede">ربّما تغيّرَ الرابطُ أو حُذِفَتِ الصفحة. يمكنك العودةُ إلى الرئيسيّةِ أو تصفّحُ البرنامجِ الأكاديميّ.</p>
+    <div class="hero-cta" style="margin-top: 28px;">
+      <a href="index.html" class="btn btn-gold">العودة إلى الرئيسية <span class="arr" aria-hidden="true">←</span></a>
+      <a href="program.html" class="btn btn-ghost">عرض البرنامج</a>
+    </div>
+  </div>
+</section>
+
+<script>
+  (function () {
+    var btn = document.querySelector('.menu-toggle');
+    var nav = document.getElementById('mainnav');
+    if (btn && nav) {
+      btn.addEventListener('click', function () {
+        var open = nav.classList.toggle('open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    }
+  })();
+</script>
+
+</body>
+</html>
