@@ -32,9 +32,11 @@ Target: **Netlify**, canonical domain **https://alhady-nb.org** (apex; `www` red
 
 DNS cutover (GoDaddy, after the Netlify site exists): remove the bare-domain Forwarding (drops the two GoDaddy forwarding A records), add `A @ → 75.2.60.5` (Netlify LB) and point the `www` CNAME at the Netlify site; leave `portal`/`auth`/Brevo records untouched. Netlify then provisions Let's Encrypt TLS automatically. Record the change in `institute-platform-infra/dns/records.md`.
 
-Pending before/at launch:
+**Launched 2026-06-11** — live at https://alhady-nb.org (apex + www, Let's Encrypt TLS, force-HTTPS).
 
-- [x] Canonical domain wired: `sitemap.xml`, `robots.txt` Sitemap line, `og:url`/`og:image`/canonical tags (2026-06-11)
+Parked post-launch tasks (canonical list: `institute-platform-docs/platform-plan.md` §7.6):
+
+- [ ] Google Search Console: verify the domain and submit `sitemap.xml`
 - [ ] SSO portal-entry link (بوابة الطالب → auth.alhady-nb.org) once the portal login flow is ready for students
 - [ ] Fill in phone/email placeholders (`يُحدَّد لاحقاً`) once official channels exist
 - [ ] Flip "التسجيل يُفتَح قريباً" messaging when admissions actually open
