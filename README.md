@@ -28,12 +28,14 @@ python3 -m http.server 8080
 
 ## Deployment
 
-Serve the repository root with any static host (nginx, GitHub Pages, Netlify, …). There is nothing to build. If the host supports it, exclude `docs/` and `CLAUDE.md` from publishing; `robots.txt` already disallows `/docs/`.
+Target: **Netlify**, canonical domain **https://alhady-nb.org** (apex; `www` redirects). `netlify.toml` copies only the deployable files into `dist/` (so `docs/`, `CLAUDE.md`, `README.md` are not published) and sets long-lived cache headers for the fonts. Connect the GitHub repo in Netlify and every push to `main` deploys; PRs get preview deploys.
 
-Pending before/at launch (domain not yet decided):
+DNS cutover (GoDaddy, after the Netlify site exists): remove the bare-domain Forwarding (drops the two GoDaddy forwarding A records), add `A @ → 75.2.60.5` (Netlify LB) and point the `www` CNAME at the Netlify site; leave `portal`/`auth`/Brevo records untouched. Netlify then provisions Let's Encrypt TLS automatically. Record the change in `institute-platform-infra/dns/records.md`.
 
-- [ ] Set the canonical domain, then add `sitemap.xml` and the `Sitemap:` line in `robots.txt`
-- [ ] Add absolute `og:image` URLs (a TBD comment marks the spot in each page's `<head>`)
+Pending before/at launch:
+
+- [x] Canonical domain wired: `sitemap.xml`, `robots.txt` Sitemap line, `og:url`/`og:image`/canonical tags (2026-06-11)
+- [ ] SSO portal-entry link (بوابة الطالب → auth.alhady-nb.org) once the portal login flow is ready for students
 - [ ] Fill in phone/email placeholders (`يُحدَّد لاحقاً`) once official channels exist
 - [ ] Flip "التسجيل يُفتَح قريباً" messaging when admissions actually open
 

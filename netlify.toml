@@ -1,0 +1,19 @@
+# Netlify config — static site, no framework.
+# The "build" only copies the deployable files into dist/ so that
+# docs/, CLAUDE.md, and README.md are never published.
+
+[build]
+  command = "mkdir -p dist && cp index.html about.html program.html admissions.html contact.html 404.html styles.css robots.txt sitemap.xml dist/ && cp -r assets dist/"
+  publish = "dist"
+
+[[headers]]
+  for = "/assets/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    Referrer-Policy = "strict-origin-when-cross-origin"

@@ -40,10 +40,9 @@ Several facts are still undecided. Do **not** fabricate values for:
 - Graduation certificate details (الشهادة الممنوحة)
 - Student housing (السكن)
 - Social media handles, phone, email
-- Domain name and hosting
 - Admission period dates (registration is not open yet)
 
-**Confirmed (no longer TBD):** the physical address is جامع الصحابي الجليل خالد بن الوليد — حلب (the Google Maps embed in the draft points to the correct mosque).
+**Confirmed (no longer TBD):** the physical address is جامع الصحابي الجليل خالد بن الوليد — حلب (the Google Maps embed points to the correct mosque). Hosting/domain: **Netlify, canonical https://alhady-nb.org** (apex) — wired into sitemap.xml, robots.txt, and the og:url/og:image/canonical tags on every page (2026-06-11).
 
 If a page needs one of these, leave a visible placeholder (e.g., `<!-- TBD: أوقات الدراسة -->`) and flag it to the user rather than inventing plausible-looking data.
 

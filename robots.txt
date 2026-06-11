@@ -2,5 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /docs/
 
-# TBD: add sitemap once the domain is decided
-# Sitemap: https://<domain>/sitemap.xml
+Sitemap: https://alhady-nb.org/sitemap.xml
