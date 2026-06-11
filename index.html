@@ -290,7 +290,9 @@
         <footer>٨ مقرّرات · ٩ ساعات أسبوعيّاً</footer>
       </article>
 
-      <article class="semester">
+      <details class="sem-fold" open>
+        <summary><span class="sn">٧ أشهر</span><span class="st">الفصلُ الثاني</span></summary>
+        <article class="semester">
         <header>
           <div class="sn">٧ أشهر</div>
           <h3>الفصلُ الثاني</h3>
@@ -307,8 +309,11 @@
         </ul>
         <footer>٨ مقرّرات · ٩ ساعات أسبوعيّاً</footer>
       </article>
+      </details>
 
-      <article class="semester">
+      <details class="sem-fold" open>
+        <summary><span class="sn">٧ أشهر</span><span class="st">الفصلُ الثالث</span></summary>
+        <article class="semester">
         <header>
           <div class="sn">٧ أشهر</div>
           <h3>الفصلُ الثالث</h3>
@@ -325,6 +330,7 @@
         </ul>
         <footer>٨ مقرّرات · ٩ ساعات أسبوعيّاً</footer>
       </article>
+      </details>
     </div>
 
     <div class="program-cta">
@@ -347,56 +353,56 @@
         <span class="bn">٠١</span>
         <div class="bbody">
           <div class="btitle">فقه العبادات</div>
-          <div class="bmeta"><span class="subj">الفقه</span><span>للشيخ السلقيني</span><span>· الفصلُ الأوّل</span></div>
+          <div class="bmeta"><span class="subj">الفقه</span><span>للشيخ السلقيني</span><span class="sem">الفصلُ الأوّل</span></div>
         </div>
       </li>
       <li class="book">
         <span class="bn">٠٢</span>
         <div class="bbody">
           <div class="btitle">شرح المنظومة البيقونيّة</div>
-          <div class="bmeta"><span class="subj">الحديث</span><span>للشيخ عبد الله سراج الدين</span><span>· الفصلُ الأوّل</span></div>
+          <div class="bmeta"><span class="subj">الحديث</span><span>للشيخ عبد الله سراج الدين</span><span class="sem">الفصلُ الأوّل</span></div>
         </div>
       </li>
       <li class="book">
         <span class="bn">٠٣</span>
         <div class="bbody">
           <div class="btitle">روضةُ الأنوار</div>
-          <div class="bmeta"><span class="subj">السيرة</span><span>للشيخ صفيّ الرحمن المباركفوري</span><span>· الفصلُ الأوّل</span></div>
+          <div class="bmeta"><span class="subj">السيرة</span><span>للشيخ صفيّ الرحمن المباركفوري</span><span class="sem">الفصلُ الأوّل</span></div>
         </div>
       </li>
       <li class="book">
         <span class="bn">٠٤</span>
         <div class="bbody">
           <div class="btitle">موعظةُ القلوب</div>
-          <div class="bmeta"><span class="subj">التزكية</span><span>للدكتور إبراهيم شاشو</span><span>· الفصلُ الأوّل</span></div>
+          <div class="bmeta"><span class="subj">التزكية</span><span>للدكتور إبراهيم شاشو</span><span class="sem">الفصلُ الأوّل</span></div>
         </div>
       </li>
       <li class="book">
         <span class="bn">٠٥</span>
         <div class="bbody">
           <div class="btitle">إعلامُ الأنام شرح بلوغ المرام</div>
-          <div class="bmeta"><span class="subj">الحديث</span><span>للدكتور نور الدين عتر</span><span>· الفصلُ الثاني</span></div>
+          <div class="bmeta"><span class="subj">الحديث</span><span>للدكتور نور الدين عتر</span><span class="sem">الفصلُ الثاني</span></div>
         </div>
       </li>
       <li class="book">
         <span class="bn">٠٦</span>
         <div class="bbody">
           <div class="btitle">المفصّل في الفقه الحنفيّ</div>
-          <div class="bmeta"><span class="subj">الفقه</span><span>للشيخ محمد ماجد عتر</span><span>· الفصلُ الثاني</span></div>
+          <div class="bmeta"><span class="subj">الفقه</span><span>للشيخ محمد ماجد عتر</span><span class="sem">الفصلُ الثاني</span></div>
         </div>
       </li>
       <li class="book">
         <span class="bn">٠٧</span>
         <div class="bbody">
           <div class="btitle">أحكامُ الزواج والطلاق</div>
-          <div class="bmeta"><span class="subj">الفقه</span><span>للدكتور أسامة حموي</span><span>· الفصلُ الثالث</span></div>
+          <div class="bmeta"><span class="subj">الفقه</span><span>للدكتور أسامة حموي</span><span class="sem">الفصلُ الثالث</span></div>
         </div>
       </li>
       <li class="book">
         <span class="bn">٠٨</span>
         <div class="bbody">
           <div class="btitle">تاريخُ الإسلام</div>
-          <div class="bmeta"><span class="subj">التاريخ</span><span>للدكتور راغب السرجاني</span><span>· الفصلُ الثالث</span></div>
+          <div class="bmeta"><span class="subj">التاريخ</span><span>للدكتور راغب السرجاني</span><span class="sem">الفصلُ الثالث</span></div>
         </div>
       </li>
     </ol>
@@ -634,6 +640,11 @@
       btn.addEventListener('click', function () {
         var open = nav.classList.toggle('open');
         btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    }
+    if (window.matchMedia('(max-width: 640px)').matches) {
+      document.querySelectorAll('details.sem-fold[open]').forEach(function (d) {
+        d.removeAttribute('open');
       });
     }
   })();
