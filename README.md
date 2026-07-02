@@ -39,7 +39,7 @@ Parked post-launch tasks (canonical list: `institute-platform-docs/platform-plan
 - [ ] Google Search Console: verify the domain and submit `sitemap.xml`
 - [ ] SSO portal-entry link (بوابة الطالب → auth.alhady-nb.org) once the portal login flow is ready for students
 - [ ] Fill in phone/email placeholders (`يُحدَّد لاحقاً`) once official channels exist
-- [ ] Flip "التسجيل يُفتَح قريباً" messaging when admissions actually open
+- [ ] Flip the "١١–١٦ تموز" registration-window copy to "التسجيل مفتوحٌ الآن" when 11 July arrives, then to closed/thank-you copy after 16 July
 
 ## Fonts
 

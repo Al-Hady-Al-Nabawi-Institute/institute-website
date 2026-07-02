@@ -19,7 +19,7 @@ Superseded — the **live site pages at the repo root win** over the plan for:
 
 - **The curriculum.** The plan's 3-semester tables (§3.2) reflect the old curriculum. Updated per the draft: فقه ٣ = أحكام الزواج والطلاق (د. أسامة حموي), التزكية في الفصول الثلاثة = موعظة القلوب (د. إبراهيم شاشو), and تفسير ١ includes تيسير الكريم الرحمن (السعدي).
 - **The application flow.** Applications are **in-person only** at the institute (no electronic application form). The plan's "نموذج التقديم الإلكتروني" step is obsolete.
-- **First cohort framing:** الدورة الأولى ١٤٤٨هـ / ٢٠٢٦. Registration is **not yet open** — copy must say "يُفتَح قريباً", never "مفتوح الآن", until the user says otherwise.
+- **First cohort framing:** الدورة الأولى ١٤٤٨هـ / ٢٠٢٦. Registration window is confirmed (2026-07-02): in-person, **١١–١٦ تموز (July)**, daily ١٠:٠٠ص–٤:٠٠م. Surface the specific dates, not vague "قريباً" language — but until 11 July arrives, copy must not read as "مفتوح الآن".
 
 When user direction and any document here disagree, the user wins; record the change in this file.
 
@@ -35,14 +35,13 @@ When user direction and any document here disagree, the user wins; record the ch
 
 Several facts are still undecided. Do **not** fabricate values for:
 
-- Study days/hours (أوقات الدراسة)
+- Exact daily class hours (start/end times of the Friday/Saturday session)
 - Admission test details (تفاصيل اختبار القبول)
 - Graduation certificate details (الشهادة الممنوحة)
 - Student housing (السكن)
-- Social media handles, phone, email
-- Admission period dates (registration is not open yet)
+- Phone, email
 
-**Confirmed (no longer TBD):** the physical address is جامع الصحابي الجليل خالد بن الوليد — حلب (the Google Maps embed points to the correct mosque). Hosting/domain: **Netlify, canonical https://alhady-nb.org** (apex) — wired into sitemap.xml, robots.txt, and the og:url/og:image/canonical tags on every page (2026-06-11).
+**Confirmed (no longer TBD):** the physical address is جامع الصحابي الجليل خالد بن الوليد — حلب (the Google Maps embed points to the correct mosque). Hosting/domain: **Netlify, canonical https://alhady-nb.org** (apex) — wired into sitemap.xml, robots.txt, and the og:url/og:image/canonical tags on every page (2026-06-11). Study days: **الجمعة for male students, السبت for female students** — one class day per week, which is the actual reason the program is pitched as "لغير المتفرغين" (2026-07-02). Admission window for الدورة الأولى ١٤٤٨هـ: in-person registration **١١–١٦ تموز (July) 2026**, daily ١٠:٠٠ص–٤:٠٠م (2026-07-02). Official Facebook page: https://www.facebook.com/alhady.nb — linked in the footer of every page and as a contact card on `contact.html` (2026-07-02).
 
 If a page needs one of these, leave a visible placeholder (e.g., `<!-- TBD: أوقات الدراسة -->`) and flag it to the user rather than inventing plausible-looking data.
 

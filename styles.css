@@ -127,7 +127,6 @@ section[id] { scroll-margin-top: 76px; }
 .brand img {
   width: 44px;
   height: auto;
-  filter: brightness(0) invert(1);
   opacity: .95;
 }
 .brand .wordmark {
@@ -350,7 +349,6 @@ section[id] { scroll-margin-top: 76px; }
   height: auto;
   align-self: center;
   margin-inline: auto;
-  filter: brightness(0) invert(1);
   opacity: .96;
 }
 .hero-mark-meta {
@@ -805,26 +803,6 @@ section[id] { scroll-margin-top: 76px; }
   line-height: 1.45;
   color: var(--ink);
 }
-.semester ul { padding: 10px 24px 18px; }
-.semester ul li {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 14px;
-  padding-block: 11px;
-  border-bottom: 1px dashed var(--line-cream);
-  font-size: 14.5px;
-  color: var(--ink);
-}
-.semester ul li > span:first-child { flex: 1; }
-.semester ul li:last-child { border-bottom: 0; }
-.semester ul li .h {
-  font-size: 12.5px;
-  font-weight: 600;
-  color: var(--gold);
-  white-space: nowrap;
-  flex: none;
-}
 .semester footer {
   border-top: 1px solid var(--line-cream);
   padding: 14px 24px;
@@ -880,84 +858,6 @@ section[id] { scroll-margin-top: 76px; }
   color: var(--ink-soft);
 }
 .book .bmeta .subj { color: var(--teal); font-weight: 600; }
-
-/* ============================================================
-   SAMPLE WEEK — table (Iwan) on soft cream
-   ============================================================ */
-.weekgrid {
-  border: 1px solid var(--ink);
-  background: var(--paper);
-  overflow-x: auto;
-}
-.weekgrid table {
-  width: 100%;
-  min-width: 700px;
-  border-collapse: collapse;
-}
-.weekgrid th, .weekgrid td {
-  padding: 14px 14px;
-  text-align: start;
-  border-bottom: 1px solid var(--line-cream);
-  border-inline-end: 1px solid var(--line-cream);
-  font-size: 14px;
-}
-.weekgrid th:last-child, .weekgrid td:last-child { border-inline-end: 0; }
-.weekgrid thead th {
-  background: var(--night);
-  color: var(--cream);
-  font-weight: 600;
-  font-size: 12.5px;
-  letter-spacing: .08em;
-  border-color: var(--line-night);
-}
-.weekgrid thead th:first-child { background: var(--night-900); color: var(--gold-soft); }
-.weekgrid tbody th {
-  font-weight: 700;
-  color: var(--ink-soft);
-  font-size: 12px;
-  letter-spacing: .04em;
-  background: var(--cream-soft);
-  white-space: nowrap;
-}
-.weekgrid tbody tr:last-child th,
-.weekgrid tbody tr:last-child td { border-bottom: 0; }
-.weekgrid td .subj {
-  display: block;
-  font-family: var(--head);
-  font-weight: 700;
-  font-size: 17px;
-  color: var(--ink);
-  line-height: 1.4;
-}
-.weekgrid td .meta {
-  display: block;
-  font-weight: 500;
-  font-size: 13px;
-  color: var(--gold);
-  margin-top: 2px;
-}
-.weekgrid td.empty {
-  background: rgba(27, 44, 40, .03);
-  color: var(--ink-faint);
-  text-align: center;
-  font-weight: 400;
-}
-.week-note {
-  font-size: 13px;
-  color: var(--ink-soft);
-  margin-top: 18px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.week-note::before {
-  content: "";
-  width: 7px;
-  height: 7px;
-  background: var(--gold);
-  transform: rotate(45deg);
-  flex: none;
-}
 
 /* ============================================================
    ADMISSION — steps + milestones (Mihrab, dark)
@@ -1155,7 +1055,6 @@ section[id] { scroll-margin-top: 76px; }
 }
 .footer-brand img {
   width: 52px;
-  filter: brightness(0) invert(1);
   opacity: .95;
 }
 .footer-brand .name {
@@ -1468,6 +1367,12 @@ section[id] { scroll-margin-top: 76px; }
 @media (min-width: 760px) {
   .cards { grid-template-columns: repeat(3, 1fr); }
 }
+@media (min-width: 560px) {
+  .cards.cols-4 { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 980px) {
+  .cards.cols-4 { grid-template-columns: repeat(4, 1fr); }
+}
 .card {
   background: var(--paper);
   border: 1px solid var(--line-cream);
@@ -1529,36 +1434,6 @@ section[id] { scroll-margin-top: 76px; }
   .brand .wordmark { display: none; }
 }
 
-/* — 2. Sample-week table → stacked day cards — */
-@media (max-width: 640px) {
-  .weekgrid { border: 0; background: none; overflow: visible; }
-  .weekgrid table, .weekgrid tbody, .weekgrid tr,
-  .weekgrid tbody th, .weekgrid td { display: block; min-width: 0; width: 100%; }
-  .weekgrid thead { display: none; }
-  .weekgrid tbody tr {
-    border: 1px solid var(--ink);
-    background: var(--paper);
-    margin-bottom: 14px;
-  }
-  .weekgrid tbody tr:last-child { margin-bottom: 0; }
-  .weekgrid tbody th {
-    background: var(--night);
-    color: var(--gold-soft);
-    font-size: 13px;
-    letter-spacing: .1em;
-    padding: 10px 16px;
-    border-inline-end: 0;
-    border-bottom: 0;
-  }
-  .weekgrid td {
-    border-inline-end: 0;
-    border-bottom: 1px dashed var(--line-cream);
-    padding: 12px 16px;
-  }
-  .weekgrid tbody tr td:last-of-type { border-bottom: 0; }
-  .weekgrid td.empty { display: none; }
-}
-
 /* — 3. Pillar arches → compact numbered rows on small phones — */
 @media (max-width: 559px) {
   .niches { gap: 0; }
@@ -1576,45 +1451,6 @@ section[id] { scroll-margin-top: 76px; }
   .niche .nn { grid-column: 1; grid-row: 1 / span 2; font-size: 20px; padding-top: 5px; }
   .niche h3 { grid-column: 2; font-size: 21px; }
   .niche p { grid-column: 2; }
-}
-
-/* — 4. Homepage semesters 2–3 fold into accordions on mobile — */
-.sem-fold > summary { display: none; list-style: none; }
-.sem-fold > summary::-webkit-details-marker { display: none; }
-@media (max-width: 640px) {
-  .sem-fold { border: 1px solid var(--line-cream); background: var(--paper); }
-  .sem-fold > summary {
-    display: grid;
-    gap: 2px;
-    justify-items: center;
-    text-align: center;
-    padding: 20px 16px;
-    cursor: pointer;
-  }
-  .sem-fold > summary .sn {
-    font-size: 12.5px;
-    font-weight: 600;
-    letter-spacing: .16em;
-    color: var(--gold);
-  }
-  .sem-fold > summary .st {
-    font-family: var(--head);
-    font-weight: 700;
-    font-size: 25px;
-    line-height: 1.45;
-    color: var(--ink);
-  }
-  .sem-fold > summary::after {
-    content: "اعرض المقرّرات ▾";
-    font-size: 13px;
-    font-weight: 600;
-    color: var(--teal);
-    margin-top: 6px;
-  }
-  .sem-fold[open] > summary::after { content: "أخفِ المقرّرات ▴"; }
-  .sem-fold[open] > summary { border-bottom: 1px solid var(--gold); }
-  .sem-fold .semester { border: 0; }
-  .sem-fold .semester header { display: none; }
 }
 
 /* — 5. Rules: let the number column size to content on small phones — */
