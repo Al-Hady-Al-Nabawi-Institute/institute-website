@@ -229,7 +229,7 @@ section[id] { scroll-margin-top: 76px; }
   align-items: center;
   gap: 12px;
   font-weight: 600;
-  font-size: 13px;
+  font-size: clamp(13px, 1.1vw, 16px);
   letter-spacing: .1em;
   color: var(--gold-soft);
   margin-bottom: 22px;
@@ -242,7 +242,7 @@ section[id] { scroll-margin-top: 76px; }
   background: var(--gold);
   color: var(--night-900);
   font-weight: 700;
-  font-size: 11px;
+  font-size: clamp(11px, 0.9vw, 13px);
   letter-spacing: .14em;
   border-radius: 2px;
 }
@@ -767,50 +767,8 @@ section[id] { scroll-margin-top: 76px; }
 .objectives.on-light li { border-bottom-color: var(--line-cream); color: var(--ink); }
 
 /* ============================================================
-   PROGRAM — semester columns (Mihrab) on cream
+   PROGRAM — overview CTA (Mihrab) on cream
    ============================================================ */
-.semesters {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: clamp(16px, 2.4vw, 28px);
-}
-@media (min-width: 860px) {
-  .semesters { grid-template-columns: repeat(3, 1fr); }
-}
-.semester {
-  background: var(--paper);
-  border: 1px solid var(--line-cream);
-  display: grid;
-  align-content: start;
-}
-.semester header {
-  text-align: center;
-  padding: 26px 20px 20px;
-  border-bottom: 1px solid var(--gold);
-  display: grid;
-  gap: 2px;
-}
-.semester header .sn {
-  font-size: 12.5px;
-  font-weight: 600;
-  letter-spacing: .16em;
-  color: var(--gold);
-}
-.semester header h3 {
-  font-family: var(--head);
-  font-weight: 700;
-  font-size: 27px;
-  line-height: 1.45;
-  color: var(--ink);
-}
-.semester footer {
-  border-top: 1px solid var(--line-cream);
-  padding: 14px 24px;
-  font-size: 13px;
-  font-weight: 500;
-  color: var(--ink-soft);
-  text-align: center;
-}
 .program-cta {
   display: flex;
   justify-content: center;
