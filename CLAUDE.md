@@ -19,7 +19,7 @@ Superseded — the **live site pages at the repo root win** over the plan for:
 
 - **The curriculum.** The plan's 3-semester tables (§3.2) reflect the old curriculum. Updated per the draft: فقه ٣ = أحكام الزواج والطلاق (د. أسامة حموي), التزكية في الفصول الثلاثة = موعظة القلوب (د. إبراهيم شاشو), and تفسير ١ includes تيسير الكريم الرحمن (السعدي).
 - **The application flow.** Applications are **in-person only** at the institute (no electronic application form). The plan's "نموذج التقديم الإلكتروني" step is obsolete.
-- **First cohort framing:** الدورة الأولى ١٤٤٨هـ / ٢٠٢٦. Registration window is confirmed (2026-07-02): in-person, **١١–١٦ تموز (July)**, daily ١٠:٠٠ص–٤:٠٠م. Surface the specific dates, not vague "قريباً" language — but until 11 July arrives, copy must not read as "مفتوح الآن".
+- **First cohort framing:** الدورة الأولى ١٤٤٨هـ / ٢٠٢٦. Registration window is confirmed: in-person, **١١–١٦ تموز (July)**, daily **٩:٠٠ص–١٢:٠٠ظ** (2026-07-04, from the official "فتح باب التسجيل" carousel — supersedes the earlier ١٠:٠٠ص–٤:٠٠م figure from 2026-07-02). Study starts **٣١ تموز (31 July) 2026** (a Friday — the male students' class day). Surface the specific dates, not vague "قريباً" language — but until 11 July arrives, copy must not read as "مفتوح الآن".
 
 When user direction and any document here disagree, the user wins; record the change in this file.
 
@@ -36,12 +36,11 @@ When user direction and any document here disagree, the user wins; record the ch
 Several facts are still undecided. Do **not** fabricate values for:
 
 - Exact daily class hours (start/end times of the Friday/Saturday session)
-- Admission test details (تفاصيل اختبار القبول)
-- Graduation certificate details (الشهادة الممنوحة)
+- Admission test details beyond its format (the test is كتابي وشفهي; dates/content TBD)
 - Student housing (السكن)
 - Phone, email
 
-**Confirmed (no longer TBD):** the physical address is جامع الصحابي الجليل خالد بن الوليد — حلب (the Google Maps embed points to the correct mosque). Hosting/domain: **Netlify, canonical https://alhady-nb.org** (apex) — wired into sitemap.xml, robots.txt, and the og:url/og:image/canonical tags on every page (2026-06-11). Study days: **الجمعة for male students, السبت for female students** — one class day per week, which is the actual reason the program is pitched as "لغير المتفرغين" (2026-07-02). Admission window for الدورة الأولى ١٤٤٨هـ: in-person registration **١١–١٦ تموز (July) 2026**, daily ١٠:٠٠ص–٤:٠٠م (2026-07-02). Official Facebook page: https://www.facebook.com/alhady.nb — linked in the footer of every page and as a contact card on `contact.html` (2026-07-02).
+**Confirmed (no longer TBD):** the physical address is جامع الصحابي الجليل خالد بن الوليد — الحمدانية، مدخل الحي الرابع، حلب (the Google Maps embed points to the correct mosque). Registration entrances (2026-07-04): men at معهد القرآن للذكور via الباب الشمالي, women at حرم النساء via الباب الغربي. Graduation certificate (2026-07-04): شهادة صادرة عن وزارة الأوقاف. Required documents (2026-07-04): صورة الهوية ×٢, صورة شخصية حديثة ملوّنة ×٢, صورة مصدّقة عن المؤهل العلمي. Seats are limited (المقاعد محدودة) — usable as urgency copy. Hosting/domain: **Netlify, canonical https://alhady-nb.org** (apex) — wired into sitemap.xml, robots.txt, and the og:url/og:image/canonical tags on every page (2026-06-11). Study days: **الجمعة for male students, السبت for female students** — one class day per week, which is the actual reason the program is pitched as "لغير المتفرغين" (2026-07-02). Admission window for الدورة الأولى ١٤٤٨هـ: in-person registration **١١–١٦ تموز (July) 2026**, daily ١٠:٠٠ص–٤:٠٠م (2026-07-02). Official Facebook page: https://www.facebook.com/alhady.nb — linked in the footer of every page and as a contact card on `contact.html` (2026-07-02).
 
 If a page needs one of these, leave a visible placeholder (e.g., `<!-- TBD: أوقات الدراسة -->`) and flag it to the user rather than inventing plausible-looking data.
 
