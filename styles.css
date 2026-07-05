@@ -1203,6 +1203,7 @@ section[id] { scroll-margin-top: 76px; }
   letter-spacing: .08em;
   color: var(--ink-faint);
   margin-top: 2px;
+  white-space: normal; /* «ساعة بالأسبوع» may break to two lines on narrow phones */
 }
 
 /* rules (dark) */

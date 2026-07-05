@@ -23,9 +23,18 @@ Superseded — the **live site pages at the repo root win** over the plan for:
 
 When user direction and any document here disagree, the user wins; record the change in this file.
 
+**Copy decisions (2026-07-05, from user notes):**
+
+- Study-days fact chips say **«أيّامُ الدوام»**, not «أيّام الدراسة».
+- Homepage ticker: separator between phrases is **«ـ» (tatweel)**, not «·»; the «مجلس علمي من العلماء المتمكنين» phrase was replaced with **«كادرٌ تدريسيٌّ متمكّنٌ ومؤهّل»** (ticker only — the faculty/المجلس العلمي sections elsewhere are unchanged).
+- Homepage «لمن هذا البرنامج» personas: chips «يوم أسبوعي، حضوري، 21 شهراً، شهادة من الأوقاف، تأصيل علمي» were removed (only «تزكية» remains); third persona heading is **«كلُّ راغبٍ في طلبِ العلمِ الشرعيّ»**.
+- Program page: weekly hours written out as **«ساعة بالأسبوع»** (no «سا/أسب» abbreviation); the «من كتب المنهج» book-list section was deleted — its key sentence («منهج يجمع بين كتب العلماء المتقدّمين وما كتبه المعاصرون من المتمكّنين في أبوابهم») now opens the intro paragraph before the semester tables.
+- Admissions banner: **«مقعد الدراسة»**, not «مقعد الدرس».
+
 ## Hard Constraints
 
 - **Arabic only, RTL.** Set `<html lang="ar" dir="rtl">`. All copy, labels, errors, and placeholders in Arabic. No English toggle unless the user asks.
+- **Western digits only (1234567890).** User decision 2026-07-05: all numerals site-wide use Western/Latin digits, never Arabic-Indic (٠١٢٣٤٥٦٧٨٩) — including dates, times, section numbers, and © year. Do not reintroduce Arabic-Indic digits in new copy.
 - **Mobile-first.** The plan flags explicitly that most visitors will arrive on phones — prioritize mobile layout over desktop.
 - **Performance matters.** Keep the bundle light; no heavy JS frameworks for what is mostly static content. The plan calls out fast load times as a requirement.
 - **Free-of-charge is a conversion message.** Surface "الدراسة مجانية" prominently on the homepage and admissions page — the plan calls this out repeatedly as the headline selling point.
@@ -40,7 +49,7 @@ Several facts are still undecided. Do **not** fabricate values for:
 - Student housing (السكن)
 - Phone, email
 
-**Confirmed (no longer TBD):** the physical address is جامع الصحابي الجليل خالد بن الوليد — الحمدانية، مدخل الحي الرابع، حلب (the Google Maps embed points to the correct mosque). Registration entrances (2026-07-04): men at معهد القرآن للذكور via الباب الشمالي, women at حرم النساء via الباب الغربي. Graduation certificate (2026-07-04): شهادة صادرة عن وزارة الأوقاف. Required documents (2026-07-04): صورة الهوية ×٢, صورة شخصية حديثة ملوّنة ×٢, صورة مصدّقة عن المؤهل العلمي. Seats are limited (المقاعد محدودة) — usable as urgency copy. Hosting/domain: **Netlify, canonical https://alhady-nb.org** (apex) — wired into sitemap.xml, robots.txt, and the og:url/og:image/canonical tags on every page (2026-06-11). Study days: **الجمعة for male students, السبت for female students** — one class day per week, which is the actual reason the program is pitched as "لغير المتفرغين" (2026-07-02). Admission window for الدورة الأولى ١٤٤٨هـ: in-person registration **١١–١٦ تموز (July) 2026**, daily ١٠:٠٠ص–٤:٠٠م (2026-07-02). Official Facebook page: https://www.facebook.com/alhady.nb — linked in the footer of every page and as a contact card on `contact.html` (2026-07-02).
+**Confirmed (no longer TBD):** the physical address is جامع الصحابي الجليل خالد بن الوليد — الحمدانية، مدخل الحي الرابع، حلب (the Google Maps embed points to the correct mosque). Registration entrances (2026-07-04): men at معهد القرآن للذكور via الباب الشمالي, women at حرم النساء via الباب الغربي. Graduation certificate (2026-07-04): شهادة صادرة عن وزارة الأوقاف. Required documents (2026-07-04): صورة الهوية ×٢, صورة شخصية حديثة ملوّنة ×٢, صورة مصدّقة عن المؤهل العلمي. Seats are limited (المقاعد محدودة) — usable as urgency copy. Hosting/domain: **Netlify, canonical https://alhady-nb.org** (apex) — wired into sitemap.xml, robots.txt, and the og:url/og:image/canonical tags on every page (2026-06-11). Study days: **الجمعة for male students, السبت for female students** — one class day per week, which is the actual reason the program is pitched as "لغير المتفرغين" (2026-07-02). Admission window for الدورة الأولى ١٤٤٨هـ: in-person registration **١١–١٦ تموز (July) 2026**, daily ١٠:٠٠ص–٤:٠٠م (2026-07-02). Official Facebook page: https://www.facebook.com/alhady.nb — linked in the footer of every page and as a contact card on `contact.html` (2026-07-02). Analytics: **Google Analytics 4, Measurement ID `G-DB0C8439XN`** (2026-07-05) — lives only in `assets/analytics.js` (loaded by all 6 pages; do not inline gtag snippets into the pages). The script no-ops off-domain so localhost/Netlify previews don't pollute stats, and fires a custom `cta_click` event for `a.btn`/`a.nav-cta` clicks.
 
 If a page needs one of these, leave a visible placeholder (e.g., `<!-- TBD: أوقات الدراسة -->`) and flag it to the user rather than inventing plausible-looking data.
 
