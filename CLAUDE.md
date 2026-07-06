@@ -27,7 +27,7 @@ When user direction and any document here disagree, the user wins; record the ch
 
 - Study-days fact chips say **«أيّامُ الدوام»**, not «أيّام الدراسة».
 - Homepage ticker: separator between phrases is **«ـ» (tatweel)**, not «·»; the «مجلس علمي من العلماء المتمكنين» phrase was replaced with **«كادرٌ تدريسيٌّ متمكّنٌ ومؤهّل»** (ticker only — the faculty/المجلس العلمي sections elsewhere are unchanged).
-- Homepage «لمن هذا البرنامج» personas: chips «يوم أسبوعي، حضوري، 21 شهراً، شهادة من الأوقاف، تأصيل علمي» were removed (only «تزكية» remains); third persona heading is **«كلُّ راغبٍ في طلبِ العلمِ الشرعيّ»**.
+- Homepage «لمن هذا البرنامج» personas: all chips removed (the last one, «تزكية», was dropped 2026-07-06 — persona cards carry no `pmeta` chips at all); third persona heading is **«كلُّ راغبٍ في طلبِ العلمِ الشرعيّ»**.
 - Program page: weekly hours written out as **«ساعة بالأسبوع»** (no «سا/أسب» abbreviation); the «من كتب المنهج» book-list section was deleted — its key sentence («منهج يجمع بين كتب العلماء المتقدّمين وما كتبه المعاصرون من المتمكّنين في أبوابهم») now opens the intro paragraph before the semester tables.
 - Admissions banner: **«مقعد الدراسة»**, not «مقعد الدرس».
 
