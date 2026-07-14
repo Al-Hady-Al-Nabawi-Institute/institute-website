@@ -15,7 +15,7 @@
   --cream-soft:#ece3cc;
   --ink:       #1b2c28;
   --ink-soft:  #4c5a55;
-  --ink-faint: #8a9692;
+  --ink-faint: #636e68;
   --gold:      #b3985a;
   --gold-soft: #cdb87e;
   --teal:      #20554b;
@@ -1467,4 +1467,50 @@ section[id] { scroll-margin-top: 76px; }
 /* cheap-device perf: skip the blur on small screens */
 @media (max-width: 640px) {
   .topnav { backdrop-filter: none; background: rgba(12, 33, 29, .97); }
+}
+
+
+/* ============== Notice strip ==============
+   The site had no way to say "this changed" — no alert/notice component
+   existed. Sits directly under the sticky header on index + admissions.
+   Night field + gold rule, matching the poster that announced the same news. */
+.notice {
+  background-color: var(--night);
+  background-image: radial-gradient(rgba(205, 184, 126, .10) 1.4px, transparent 1.8px);
+  background-size: 64px 64px;
+  border-bottom: 2px solid var(--gold);
+  color: var(--cream);
+}
+.notice-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px 24px;
+  padding: 16px 0;
+  text-align: center;
+}
+.notice .n-tag {
+  flex: none;
+  font: 700 .78rem/1 var(--body);
+  letter-spacing: .14em;
+  color: var(--night-900);
+  background: var(--gold);
+  padding: 9px 18px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+.notice .n-txt { font: 400 1rem/1.65 var(--body); color: rgba(244, 238, 222, .92); }
+.notice .n-txt b { font-weight: 700; color: var(--gold-soft); white-space: nowrap; }
+.notice .n-link {
+  flex: none;
+  font: 700 .95rem/1 var(--body);
+  color: var(--gold-soft);
+  border-bottom: 1px solid rgba(191, 155, 74, .5);
+  padding-bottom: 3px;
+}
+.notice .n-link:hover { color: var(--cream); border-color: var(--cream); }
+@media (max-width: 640px) {
+  .notice-inner { padding: 14px 0; gap: 9px 16px; }
+  .notice .n-txt { font-size: .93rem; }
 }
