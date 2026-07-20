@@ -10,6 +10,8 @@
   for = "/assets/fonts/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
+    # يسمح لبريد الإعلانات (institute-designs) وعملاء البريد بتحميل خطوط الهوية من هنا
+    Access-Control-Allow-Origin = "*"
 
 [[headers]]
   for = "/*"
