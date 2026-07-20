@@ -3,7 +3,7 @@
 # docs/, CLAUDE.md, and README.md are never published.
 
 [build]
-  command = "mkdir -p dist && cp index.html about.html program.html admissions.html contact.html 404.html styles.css robots.txt sitemap.xml dist/ && cp -r assets dist/"
+  command = "mkdir -p dist && cp index.html about.html program.html admissions.html contact.html 404.html styles.css robots.txt sitemap.xml _headers dist/ && cp -r assets dist/"
   publish = "dist"
 
 [[headers]]
