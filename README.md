@@ -30,7 +30,7 @@ python3 -m http.server 8080
 
 Target: **Netlify**, canonical domain **https://alhady-nb.org** (apex; `www` redirects). `netlify.toml` copies only the deployable files into `dist/` (so `docs/`, `CLAUDE.md`, `README.md` are not published) and sets long-lived cache headers for the fonts. Connect the GitHub repo in Netlify and every push to `main` deploys; PRs get preview deploys.
 
-DNS cutover (GoDaddy, after the Netlify site exists): remove the bare-domain Forwarding (drops the two GoDaddy forwarding A records), add `A @ → 75.2.60.5` (Netlify LB) and point the `www` CNAME at the Netlify site; leave `portal`/`auth`/Brevo records untouched. Netlify then provisions Let's Encrypt TLS automatically. Record the change in `institute-platform-infra/dns/records.md`.
+DNS cutover (GoDaddy, after the Netlify site exists): remove the bare-domain Forwarding (drops the two GoDaddy forwarding A records), add `A @ → 75.2.60.5` (Netlify LB) and point the `www` CNAME at the Netlify site; leave `portal`/`auth`/Brevo records untouched. Netlify then provisions Let's Encrypt TLS automatically. Record the change in `institute-platform-docs/infra/dns-records.md` (it moved there when `institute-platform-infra` was archived on 2026-08-11 — that repo is read-only).
 
 **Launched 2026-06-11** — live at https://alhady-nb.org (apex + www, Let's Encrypt TLS, force-HTTPS).
 
