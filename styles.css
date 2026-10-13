@@ -1514,3 +1514,15 @@ section[id] { scroll-margin-top: 76px; }
   .notice-inner { padding: 14px 0; gap: 9px 16px; }
   .notice .n-txt { font-size: .93rem; }
 }
+
+/* app.html — the APK checksum, shown as one unbroken LTR token */
+.hash {
+  display: block;
+  direction: ltr;
+  text-align: left;
+  font-family: ui-monospace, Menlo, Consolas, monospace;
+  font-size: 12px;
+  line-height: 1.6;
+  word-break: break-all;
+  color: var(--ink);
+}
